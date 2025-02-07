@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.demofx.controller.NewBookController"
+      fx:id="vbNewBookFormRoot"
+      prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <GridPane layoutX="20.0" layoutY="20.0" hgap="10" vgap="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <!-- Название книги -->
+            <Label text="Название:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="titleField" promptText="Введите название" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <!-- Авторы -->
+            <Label text="Авторы:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="authorsField" promptText="Введите авторов" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <!-- Год публикации -->
+            <Label text="Год публикации:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="yearField" promptText="Введите год публикации" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <!-- Количество -->
+            <Label text="Количество:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="quantityField" promptText="Введите количество" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <!-- В наличии -->
+            <Label text="В наличии:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="inStockField" promptText="Введите число в наличии" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <!-- Кнопка Добавить -->
+            <Button text="Добавить" onAction="#create" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        </GridPane>
+    </children>
+</VBox>
